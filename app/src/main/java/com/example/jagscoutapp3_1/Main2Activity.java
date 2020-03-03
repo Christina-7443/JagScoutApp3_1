@@ -6,15 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 
 
 public class Main2Activity extends AppCompatActivity {
-    EditText drive,
-            rotation,
-            position;
+
+    //declaring the variables for use later
+
+    Switch  swDrive,
+            swRotation,
+            swPosition;
     String stDrive,
             stRotation,
             stPosition;
@@ -47,9 +52,9 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        drive = findViewById(R.id.driveOffLine);
-        rotation = findViewById(R.id.rotation);
-        position = findViewById(R.id.position);
+        swDrive = findViewById(R.id.driveOffLine);
+        swRotation = findViewById(R.id.rotation);
+        swPosition = findViewById(R.id.position);
 
         //makes the buttons connect with the ones in the .xml
         btnI = (Button)findViewById(R.id.innerButton);
@@ -60,6 +65,8 @@ public class Main2Activity extends AppCompatActivity {
         btnMI = (Button)findViewById(R.id.minusInner);
         btnMO = (Button)findViewById(R.id.minusOuter);
         btnML = (Button)findViewById(R.id.minusLower);
+
+
 
 
 
@@ -76,6 +83,8 @@ public class Main2Activity extends AppCompatActivity {
         tvRobot.setText(stRobot);
 
 
+
+
         Intent openMatchPlay = getIntent();
 
         BtnNext = findViewById(R.id.BtnNext);
@@ -89,6 +98,7 @@ public class Main2Activity extends AppCompatActivity {
 
 
     }
+
 
     //makes the inner button say how many times it has been pressed
     public void CountInner(View v){
@@ -134,17 +144,28 @@ public class Main2Activity extends AppCompatActivity {
     public void moveToEnd(){
         Intent lastPage = new Intent(Main2Activity.this, Main3Activity.class);
 
-        stDrive = drive.getText().toString();
-        stRotation = rotation.getText().toString();
-        stPosition = position.getText().toString();
+        String strDrive, strRotation, strPosition;
+        if (swDrive.isChecked())
+            strDrive = swDrive.getTextOn().toString();
+        else
+            strDrive = swDrive.getTextOff().toString();
+        if (swRotation.isChecked())
+            strRotation = swRotation.getTextOn().toString();
+        else
+            strRotation = swRotation.getTextOn().toString();
+        if (swPosition.isChecked())
+            strPosition = swPosition.getTextOn().toString();
+        else
+            strPosition = swPosition.getTextOff().toString();
 
         lastPage.putExtra("nameView", st);
         lastPage.putExtra("nameMatch" , stMatch);
         lastPage.putExtra("nameRobot" , stRobot);
-        lastPage.putExtra("didDrive", stDrive);
-        lastPage.putExtra("didRotation", stRotation);
-        lastPage.putExtra("didPosition", stPosition);
+        lastPage.putExtra("didDrive", strDrive);
+        lastPage.putExtra("didRotation", strRotation);
+        lastPage.putExtra("didPosition", strPosition);
         startActivity(lastPage);
         finish();
     }
+
 }
