@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,10 +24,29 @@ import static com.example.jagscoutapp3_1.Main2Activity.missedCount;
 import static com.example.jagscoutapp3_1.Main2Activity.penaltyCount;
 
 public class Main3Activity extends AppCompatActivity {
-    EditText drive, rotation, position, climb, level, park, none, notes;
-    String stDrive, stRotation, stPosition, stClimb, stLevel, stPark, stNone, stNotes;
-    TextView tv, tvMatch,tvRobot;
-    String st, stMatch, stRobot;
+    Switch drive,
+            rotation,
+            position;
+    EditText
+            climb,
+            level,
+            park,
+            none,
+            notes;
+    String stDrive,
+            stRotation,
+            stPosition,
+            stClimb,
+            stLevel,
+            stPark,
+            stNone,
+            stNotes;
+    TextView tv,
+            tvMatch,
+            tvRobot;
+    String st,
+            stMatch,
+            stRobot;
     DatabaseHelper myDB;
     //Names Buttons
     Button btnS;
