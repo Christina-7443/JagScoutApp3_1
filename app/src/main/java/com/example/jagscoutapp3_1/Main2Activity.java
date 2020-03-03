@@ -152,7 +152,7 @@ public class Main2Activity extends AppCompatActivity {
         if (swRotation.isChecked())
             strRotation = swRotation.getTextOn().toString();
         else
-            strRotation = swRotation.getTextOn().toString();
+            strRotation = swRotation.getTextOff().toString();
         if (swPosition.isChecked())
             strPosition = swPosition.getTextOn().toString();
         else
