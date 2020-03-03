@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">JagScoutApp3_1</string>
+    <string name="Title1">Pre-Match</string>
+    <string name="Title2">Match Play</string>
+    <string name="Title3">End Game</string>
+    <string name="plainTextMatch">Match</string>
+    <string name="matchInput">#</string>
+    <string name="plainTextRobot">Robot</string>
+    <string name="robotNumber">Robot Number</string>
+    <string-array name="robotArray">
+        <item>435</item>
+        <item>2059</item>
+        <item>2642</item>
+        <item>3229</item>
+        <item>3459</item>
+        <item>4291</item>
+        <item>4561</item>
+        <item>4816</item>
+        <item>4828</item>
+        <item>5160</item>
+        <item>5190</item>
+        <item>5511</item>
+        <item>5518</item>
+        <item>5607</item>
+        <item>5762</item>
+        <item>5919</item>
+        <item>6004</item>
+        <item>6240</item>
+        <item>6496</item>
+        <item>6500</item>
+        <item>6502</item>
+        <item>6565</item>
+        <item>6908</item>
+        <item>7265</item>
+        <item>7463</item>
+        <item>7671</item>
+        <item>7763</item>
+        <item>7890</item>
+        <item>8090</item>
+    </string-array>
+    <string-array name="driveOffLine">
+        <item>Drive Off Line</item>
+        <item>Drive Off Line Yes</item>
+        <item>Drive Off Line No</item>
+    </string-array>
+    <string-array name="rotationControl">
+        <item>Rotation Control</item>
+        <item>Successful Rotate</item>
+        <item>No Rotate</item>
+        <item>Tried and Failed to Rotate</item>
+    </string-array>
+    <string-array name="positionControl">
+        <item>Position Control</item>
+        <item>Successful Position</item>
+        <item>No Position Control</item>
+        <item>Tried and Failed Position</item>
+    </string-array>
+    <string name="plainTextCollector">Scout name:</string>
+    <string name="collectorName">Name</string>
+    <string name="startButton">Start</string>
+    <string name="powercellPoints">Powercell Points</string>
+    <string name="innerButton">Inner</string>
+    <string name="outerButton">Outer</string>
+    <string name="missedShotButton">   Missed Shot   </string>
+    <string name="lowerButton">Lower</string>
+    <string name="fillerText">_____</string>
+    <string name="penaltyButton">Penalty</string>
+    <string name="plainTextAutonomous">Autonomous</string>
+    <string name="driveOffLineButton">Drive Off Line</string>
+    <string name="plainTextControlCenter">Control Center</string>
+    <string name="rotationControlButton">Rotation Control</string>
+    <string name="positionControlButton">Position Control</string>
+    <string name="closeMatchButton">Close Match</string>
+    <string name="climbedRadioButton">Climbed</string>
+    <string name="levelCheckBox">Level</string>
+    <string name="rendezvousRadioButton">Rendezvous</string>
+    <string name="neitherRadioButton">Neither</string>
+    <string name="plainTextNotes">Notes:</string>
+    <string name="notesSpace"> </string>
+    <string name="submitButton">Return to Start</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="viewDataButton">View Data</string>
+    <string name="endRoundButton">End Round</string>
+    <string name="minusButtons">-</string>
+    <string name="nameView"> </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
