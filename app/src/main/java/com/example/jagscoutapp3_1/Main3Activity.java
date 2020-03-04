@@ -39,10 +39,10 @@ public class Main3Activity extends AppCompatActivity {
     String stDrive,
             stRotation,
             stPosition,
-            stClimb,
-            stLevel,
-            stPark,
-            stNone,
+            strClimb,
+            strLevel,
+            strPark,
+            strNone,
             stNotes;
     TextView tv,
             tvMatch,
@@ -145,6 +145,7 @@ public class Main3Activity extends AppCompatActivity {
                             stNone = none.getTextOn().toString();
                         else
                             stNone = none.getTextOff().toString();
+                        stNotes = notes.getText().toString();
 
                         boolean isInsterted = myDB.insertData(stRobot,innerCount,outerCount,lowerCount,missedCount,penaltyCount,st,stMatch,stDrive,stRotation, stPosition,stClimb,stLevel,stPark,stNone,stNotes);
                         if(isInsterted =true) {

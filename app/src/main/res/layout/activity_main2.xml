@@ -209,6 +209,13 @@
                         android:background="@color/colorAccent"
                         android:onClick="CountMissed"
                         android:text="@string/missedShotButton" />
+                    <Button
+                        android:id="@+id/minusMissed"
+                        style="android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="MinusMissed"
+                        android:text="@string/minusButtons" />
                 </TableRow>
 
 
@@ -228,6 +235,13 @@
                 android:background="@color/red"
                 android:onClick="CountPenalty"
                 android:text="@string/penaltyButton" />
+            <Button
+                android:id="@+id/minusPenalty"
+                style="android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="MinusPenalty"
+                android:text="@string/minusButtons" />
 
 
         </LinearLayout>

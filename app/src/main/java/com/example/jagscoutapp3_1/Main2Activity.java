@@ -133,9 +133,19 @@ public class Main2Activity extends AppCompatActivity {
         missedCount++;
         btnM.setText("Missed Shot : " + String.valueOf(missedCount));
     }
+    //subtracts 1 from missed
+    public void MinusMissed(View v){
+        missedCount--;
+        btnM.setText("Missed Shot : " + String.valueOf(missedCount));
+    }
     //makes the penalty button say how many times it has been pressed
     public void CountPenalty(View v){
         penaltyCount++;
+        btnP.setText("Penalty : " + String.valueOf(penaltyCount));
+    }
+    //subtracts 1 from penalty
+    public void MinusPenalty(View v){
+        penaltyCount--;
         btnP.setText("Penalty : " + String.valueOf(penaltyCount));
     }
     //makes it so when you click the close button it goes to the final page
