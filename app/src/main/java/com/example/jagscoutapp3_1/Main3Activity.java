@@ -8,7 +8,9 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,13 +28,14 @@ import static com.example.jagscoutapp3_1.Main2Activity.penaltyCount;
 public class Main3Activity extends AppCompatActivity {
     Switch drive,
             rotation,
-            position;
-    EditText
-            climb,
+            position,
             level,
+            climb,
             park,
-            none,
+            none;
+    EditText
             notes;
+
     String stDrive,
             stRotation,
             stPosition,
@@ -125,11 +128,24 @@ public class Main3Activity extends AppCompatActivity {
                 new View.OnClickListener(){
                     @Override
                     public void onClick(View v){
-                        stClimb = climb.getText().toString();
-                        stLevel = level.getText().toString();
-                        stPark = park.getText().toString();
-                        stNone = none.getText().toString();
-                        stNotes = notes.getText().toString();
+                        String stClimb, stLevel, stPark, stNone;
+                        if (climb.isChecked())
+                            stClimb = climb.getTextOn().toString();
+                        else
+                            stClimb = climb.getTextOff().toString();
+                        if (level.isChecked())
+                            stLevel = level.getTextOn().toString();
+                        else
+                            stLevel = level.getTextOff().toString();
+                        if (park.isChecked())
+                            stPark = park.getTextOn().toString();
+                        else
+                            stPark = park.getTextOff().toString();
+                        if (none.isChecked())
+                            stNone = none.getTextOn().toString();
+                        else
+                            stNone = none.getTextOff().toString();
+
                         boolean isInsterted = myDB.insertData(stRobot,innerCount,outerCount,lowerCount,missedCount,penaltyCount,st,stMatch,stDrive,stRotation, stPosition,stClimb,stLevel,stPark,stNone,stNotes);
                         if(isInsterted =true) {
                             Toast.makeText(Main3Activity.this,"Data Inserted", Toast.LENGTH_LONG).show();

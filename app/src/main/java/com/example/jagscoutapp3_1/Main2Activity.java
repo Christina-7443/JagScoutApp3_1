@@ -20,9 +20,7 @@ public class Main2Activity extends AppCompatActivity {
     Switch  swDrive,
             swRotation,
             swPosition;
-    String stDrive,
-            stRotation,
-            stPosition;
+
     TextView tv,
             tvMatch,
             tvRobot;

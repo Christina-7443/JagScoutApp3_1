@@ -58,26 +58,67 @@
         android:background="@color/lightBlue"
         tools:context=".Main3Activity"
         android:orientation="vertical">
-        <EditText
-            android:id="@+id/climbed"
-            android:layout_width="wrap_content"
+
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Climbed"/>
-        <EditText
-            android:id="@+id/level"
-            android:layout_width="wrap_content"
+            android:text="@string/climbedRadioButton" />
+
+        <Switch
+                android:id="@+id/climbed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textOn="@string/yes"
+                android:textOff="@string/no"
+                />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Level"/>
-        <EditText
-            android:id="@+id/rendezvous"
-            android:layout_width="wrap_content"
+            android:text="@string/levelCheckBox" />
+
+        <Switch
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textOn="@string/yes"
+                android:textOff="@string/no"
+                />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Rendezvous"/>
-        <EditText
-            android:id="@+id/none"
-            android:layout_width="wrap_content"
+            android:text="@string/rendezvousRadioButton" />
+
+        <Switch
+                android:id="@+id/rendezvous"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textOn="@string/yes"
+                android:textOff="@string/no"
+                />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="None"/>
+            android:text="@string/neitherRadioButton" />
+
+        <Switch
+                android:id="@+id/none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/yes"
+                android:textOff="@string/no"
+                />
+
 
         <Space
             android:layout_width="match_parent"
