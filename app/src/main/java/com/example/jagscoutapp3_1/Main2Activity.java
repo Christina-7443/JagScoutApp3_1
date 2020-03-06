@@ -18,6 +18,7 @@ public class Main2Activity extends AppCompatActivity {
     //declaring the variables for use later
 
     Switch  swDrive,
+            swAuto,
             swRotation,
             swPosition;
 
@@ -51,6 +52,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         swDrive = findViewById(R.id.driveOffLine);
+        swAuto = findViewById(R.id.autoShots);
         swRotation = findViewById(R.id.rotation);
         swPosition = findViewById(R.id.position);
 
@@ -152,11 +154,15 @@ public class Main2Activity extends AppCompatActivity {
     public void moveToEnd(){
         Intent lastPage = new Intent(Main2Activity.this, Main3Activity.class);
 
-        String strDrive, strRotation, strPosition;
+        String strDrive, strAuto, strRotation, strPosition;
         if (swDrive.isChecked())
             strDrive = swDrive.getTextOn().toString();
         else
             strDrive = swDrive.getTextOff().toString();
+        if (swAuto.isChecked())
+            strAuto = swAuto.getTextOn().toString();
+        else
+            strAuto = swAuto.getTextOff().toString();
         if (swRotation.isChecked())
             strRotation = swRotation.getTextOn().toString();
         else
@@ -170,6 +176,7 @@ public class Main2Activity extends AppCompatActivity {
         lastPage.putExtra("nameMatch" , stMatch);
         lastPage.putExtra("nameRobot" , stRobot);
         lastPage.putExtra("didDrive", strDrive);
+        lastPage.putExtra("didShoot", strAuto);
         lastPage.putExtra("didRotation", strRotation);
         lastPage.putExtra("didPosition", strPosition);
         startActivity(lastPage);

@@ -22,13 +22,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_8 = "st";
     public static final String COL_9 = "stMatch";
     public static final String COL_10 = "stDrive";
-    public static final String COL_11 = "stRotation";
-    public static final String COL_12 = "stPosition";
-    public static final String COL_13 = "stClimb";
-    public static final String COL_14 = "stLevel";
-    public static final String COL_15 = "stPark";
-    public static final String COL_16 = "stNone";
-    public static final String COL_17 = "stNotes";
+    public static final String COL_11 = "stAuto";
+    public static final String COL_12 = "stRotation";
+    public static final String COL_13 = "stPosition";
+    public static final String COL_14 = "stClimb";
+    public static final String COL_15 = "stLevel";
+    public static final String COL_16 = "stPark";
+    public static final String COL_17 = "stNone";
+    public static final String COL_18 = "stNotes";
 
 
     public DatabaseHelper(Context context) {
@@ -49,7 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-    public boolean insertData(String stRobot, Integer inner_goals, Integer outer_goals, Integer lower_goals, Integer missed_goals, Integer penalty_count,String st,String stMatch,String stDrive, String stRotation, String  stPosition, String stClimb, String stLevel, String stPark, String stNone, String stNotes){
+    public boolean insertData(String stRobot, Integer inner_goals, Integer outer_goals, Integer lower_goals, Integer missed_goals, Integer penalty_count,String st,String stMatch,String stDrive,String stAuto, String stRotation, String  stPosition, String stClimb, String stLevel, String stPark, String stNone, String stNotes){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, stRobot);
@@ -61,13 +62,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_8, st);
         contentValues.put(COL_9, stMatch);
         contentValues.put(COL_10, stDrive);
-        contentValues.put(COL_11, stRotation);
-        contentValues.put(COL_12, stPosition);
-        contentValues.put(COL_13, stClimb);
-        contentValues.put(COL_14, stLevel);
-        contentValues.put(COL_15, stPark);
-        contentValues.put(COL_16, stNone);
-        contentValues.put(COL_17, stNotes);
+        contentValues.put(COL_11, stAuto);
+        contentValues.put(COL_12, stRotation);
+        contentValues.put(COL_13, stPosition);
+        contentValues.put(COL_14, stClimb);
+        contentValues.put(COL_15, stLevel);
+        contentValues.put(COL_16, stPark);
+        contentValues.put(COL_17, stNone);
+        contentValues.put(COL_18, stNotes);
 
         long result = db.insert(TABLE_NAME, null,contentValues);
         if (result == -1)

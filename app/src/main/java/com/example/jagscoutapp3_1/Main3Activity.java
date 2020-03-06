@@ -27,6 +27,7 @@ import static com.example.jagscoutapp3_1.Main2Activity.penaltyCount;
 
 public class Main3Activity extends AppCompatActivity {
     Switch drive,
+            auto,
             rotation,
             position,
             level,
@@ -37,6 +38,7 @@ public class Main3Activity extends AppCompatActivity {
             notes;
 
     String stDrive,
+            stAuto,
             stRotation,
             stPosition,
             strClimb,
@@ -76,6 +78,7 @@ public class Main3Activity extends AppCompatActivity {
         tvRobot = findViewById(R.id.robot);
 
         drive = findViewById(R.id.driveOffLine);
+        auto = findViewById(R.id.autoShots);
         rotation = findViewById(R.id.rotation);
         position = findViewById(R.id.position);
         climb = findViewById(R.id.climbed);
@@ -91,6 +94,7 @@ public class Main3Activity extends AppCompatActivity {
         stMatch=getIntent().getExtras().getString("nameMatch");
         stRobot=getIntent().getExtras().getString("nameRobot");
         stDrive=getIntent().getExtras().getString("didDrive");
+        stAuto = getIntent().getExtras().getString("didShoot");
         stRotation=getIntent().getExtras().getString("didRotation");
         stPosition=getIntent().getExtras().getString("didPosition");
         tv.setText(st);
@@ -147,7 +151,7 @@ public class Main3Activity extends AppCompatActivity {
                             stNone = none.getTextOff().toString();
                         stNotes = notes.getText().toString();
 
-                        boolean isInsterted = myDB.insertData(stRobot,innerCount,outerCount,lowerCount,missedCount,penaltyCount,st,stMatch,stDrive,stRotation, stPosition,stClimb,stLevel,stPark,stNone,stNotes);
+                        boolean isInsterted = myDB.insertData(stRobot,innerCount,outerCount,lowerCount,missedCount,penaltyCount,st,stMatch,stDrive,stAuto,stRotation, stPosition,stClimb,stLevel,stPark,stNone,stNotes);
                         if(isInsterted =true) {
                             Toast.makeText(Main3Activity.this,"Data Inserted", Toast.LENGTH_LONG).show();
                         } else{
@@ -181,13 +185,14 @@ public class Main3Activity extends AppCompatActivity {
                             buffer.append("Scouter Name :" + result.getString(7)+"\n");
                             buffer.append("Match Number :" + result.getString(8)+"\n");
                             buffer.append("Drive Off Line :" + result.getString(9)+"\n");
-                            buffer.append("Rotation Control :" + result.getString(10)+"\n");
-                            buffer.append("Position Control :" + result.getString(11)+"\n");
-                            buffer.append("Climb :" + result.getString(12)+"\n");
-                            buffer.append("Level :" + result.getString(13)+"\n");
-                            buffer.append("Park :" + result.getString(14)+"\n");
-                            buffer.append("None :" + result.getString(15)+"\n");
-                            buffer.append("Notes :" + result.getString(16)+"\n\n");
+                            buffer.append("Auto Shot :" + result.getString(10)+"\n");
+                            buffer.append("Rotation Control :" + result.getString(11)+"\n");
+                            buffer.append("Position Control :" + result.getString(12)+"\n");
+                            buffer.append("Climb :" + result.getString(13)+"\n");
+                            buffer.append("Level :" + result.getString(14)+"\n");
+                            buffer.append("Park :" + result.getString(15)+"\n");
+                            buffer.append("None :" + result.getString(16)+"\n");
+                            buffer.append("Notes :" + result.getString(17)+"\n\n");
                         }
 
                         //show all data
