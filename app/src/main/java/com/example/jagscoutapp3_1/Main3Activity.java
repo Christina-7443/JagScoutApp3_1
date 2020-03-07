@@ -151,7 +151,24 @@ public class Main3Activity extends AppCompatActivity {
                             stNone = none.getTextOff().toString();
                         stNotes = notes.getText().toString();
 
-                        boolean isInsterted = myDB.insertData(stRobot,innerCount,outerCount,lowerCount,missedCount,penaltyCount,st,stMatch,stDrive,stAuto,stRotation, stPosition,stClimb,stLevel,stPark,stNone,stNotes);
+                        boolean isInsterted = myDB.insertData(
+                                stRobot,
+                                innerCount,
+                                outerCount,
+                                lowerCount,
+                                missedCount,
+                                penaltyCount,
+                                st,
+                                stMatch,
+                                stDrive,
+                                stAuto,
+                                stRotation,
+                                stPosition,
+                                stClimb,
+                                stLevel,
+                                stPark,
+                                stNone,
+                                stNotes);
                         if(isInsterted =true) {
                             Toast.makeText(Main3Activity.this,"Data Inserted", Toast.LENGTH_LONG).show();
                         } else{

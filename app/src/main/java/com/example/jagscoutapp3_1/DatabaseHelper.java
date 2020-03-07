@@ -40,7 +40,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT, stRobot STRING, inner_goals INTEGER, outer_goals INTEGER, lower_goals INTEGER, missed_goals INTEGER, penalty_count INTEGER, st STRING, stMatch STRING, stDrive STRING, stRotation STRING, stPosition STRING, stClimb STRING, stLevel STRING, stPark STRING, stNone STRING, stNotes STRING)");
+        db.execSQL("create table " + TABLE_NAME +" (" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "stRobot STRING, " +
+                "inner_goals INTEGER, " +
+                "outer_goals INTEGER, " +
+                "lower_goals INTEGER, " +
+                "missed_goals INTEGER, " +
+                "penalty_count INTEGER, " +
+                "st STRING, " +
+                "stMatch STRING, " +
+                "stDrive STRING," +
+                "stAuto STRING, " +
+                "stRotation STRING, " +
+                "stPosition STRING, " +
+                "stClimb STRING, " +
+                "stLevel STRING, " +
+                "stPark STRING, " +
+                "stNone STRING, " +
+                "stNotes STRING)");
 
     }
 
@@ -50,7 +68,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-    public boolean insertData(String stRobot, Integer inner_goals, Integer outer_goals, Integer lower_goals, Integer missed_goals, Integer penalty_count,String st,String stMatch,String stDrive,String stAuto, String stRotation, String  stPosition, String stClimb, String stLevel, String stPark, String stNone, String stNotes){
+    public boolean insertData(
+            String stRobot,
+            Integer inner_goals,
+            Integer outer_goals,
+            Integer lower_goals,
+            Integer missed_goals,
+            Integer penalty_count,
+            String st,
+            String stMatch,
+            String stDrive,
+            String stAuto,
+            String stRotation,
+            String  stPosition,
+            String stClimb,
+            String stLevel,
+            String stPark,
+            String stNone,
+            String stNotes){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, stRobot);
