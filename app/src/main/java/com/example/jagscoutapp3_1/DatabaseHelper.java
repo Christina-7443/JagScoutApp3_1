@@ -13,14 +13,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "scoutdata.db";
     public static final String TABLE_NAME = "scouttable";
     public static final String COL_1 = "ID";
-    public static final String COL_2 = "stRobot";
-    public static final String COL_3 = "inner_goals";
-    public static final String COL_4 = "outer_goals";
-    public static final String COL_5 = "lower_goals";
-    public static final String COL_6 = "missed_goals";
-    public static final String COL_7 = "penalty_count";
-    public static final String COL_8 = "st";
-    public static final String COL_9 = "stMatch";
+    public static final String COL_3 = "stRobot";
+    public static final String COL_5 = "inner_goals";
+    public static final String COL_6 = "outer_goals";
+    public static final String COL_7 = "lower_goals";
+    public static final String COL_8 = "missed_goals";
+    public static final String COL_9 = "penalty_count";
+    public static final String COL_4 = "st";
+    public static final String COL_2 = "stMatch";
     public static final String COL_10 = "stDrive";
     public static final String COL_11 = "stAuto";
     public static final String COL_12 = "stRotation";
@@ -42,14 +42,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TABLE_NAME +" (" +
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "stMatch STRING, " +
                 "stRobot STRING, " +
+                "st STRING, " +
                 "inner_goals INTEGER, " +
                 "outer_goals INTEGER, " +
                 "lower_goals INTEGER, " +
                 "missed_goals INTEGER, " +
                 "penalty_count INTEGER, " +
-                "st STRING, " +
-                "stMatch STRING, " +
                 "stDrive STRING," +
                 "stAuto STRING, " +
                 "stRotation STRING, " +
@@ -88,14 +88,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             String stNotes){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(COL_2, stRobot);
-        contentValues.put(COL_3, inner_goals);
-        contentValues.put(COL_4, outer_goals);
-        contentValues.put(COL_5, lower_goals);
-        contentValues.put(COL_6, missed_goals);
-        contentValues.put(COL_7, penalty_count);
-        contentValues.put(COL_8, st);
-        contentValues.put(COL_9, stMatch);
+        contentValues.put(COL_3, stRobot);
+        contentValues.put(COL_5, inner_goals);
+        contentValues.put(COL_6, outer_goals);
+        contentValues.put(COL_7, lower_goals);
+        contentValues.put(COL_8, missed_goals);
+        contentValues.put(COL_9, penalty_count);
+        contentValues.put(COL_4, st);
+        contentValues.put(COL_2, stMatch);
         contentValues.put(COL_10, stDrive);
         contentValues.put(COL_11, stAuto);
         contentValues.put(COL_12, stRotation);

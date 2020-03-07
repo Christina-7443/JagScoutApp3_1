@@ -193,14 +193,14 @@ public class Main3Activity extends AppCompatActivity {
                         StringBuffer buffer = new StringBuffer();
                         while(result.moveToNext()){
                             buffer.append("Id :" + result.getString(0)+"\n");
-                            buffer.append("Team number :" + result.getString(1)+"\n");
-                            buffer.append("Inner goals :" + result.getString(2)+"\n");
-                            buffer.append("Outer goals :" + result.getString(3)+"\n");
-                            buffer.append("Lower goals :" + result.getString(4)+"\n");
-                            buffer.append("Missed Count :" + result.getString(5)+"\n");
-                            buffer.append("Penalty Count :" + result.getString(6)+"\n");
-                            buffer.append("Scouter Name :" + result.getString(7)+"\n");
-                            buffer.append("Match Number :" + result.getString(8)+"\n");
+                            buffer.append("Match Number :" + result.getString(1)+"\n");
+                            buffer.append("Team number :" + result.getString(2)+"\n");
+                            buffer.append("Scouter Name :" + result.getString(3)+"\n");
+                            buffer.append("Inner goals :" + result.getString(4)+"\n");
+                            buffer.append("Outer goals :" + result.getString(5)+"\n");
+                            buffer.append("Lower goals :" + result.getString(6)+"\n");
+                            buffer.append("Missed Count :" + result.getString(7)+"\n");
+                            buffer.append("Penalty Count :" + result.getString(8)+"\n");
                             buffer.append("Drive Off Line :" + result.getString(9)+"\n");
                             buffer.append("Auto Shot :" + result.getString(10)+"\n");
                             buffer.append("Rotation Control :" + result.getString(11)+"\n");
