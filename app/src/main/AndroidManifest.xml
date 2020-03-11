@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jagscoutapp3_1">
+    package="info.scoutApp.jagscoutapp3_1">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main3Activity"></activity>
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="info.scoutApp.jagscoutapp3_1.Main3Activity"></activity>
+        <activity android:name="info.scoutApp.jagscoutapp3_1.Main2Activity" />
+        <activity android:name="info.scoutApp.jagscoutapp3_1.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

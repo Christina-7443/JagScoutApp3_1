@@ -1,6 +1,6 @@
 //doing everything from video youtube.com/watch?v=cp2rL3AFmI&t=315s Android SQLite Database Tutorial
 
-package com.example.jagscoutapp3_1;
+package info.scoutApp.jagscoutapp3_1;
 
 import android.content.ContentValues;
 import android.content.Context;

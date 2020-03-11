@@ -1,4 +1,4 @@
-package com.example.jagscoutapp3_1;
+package info.scoutApp.jagscoutapp3_1;
 
 import org.junit.Test;
 

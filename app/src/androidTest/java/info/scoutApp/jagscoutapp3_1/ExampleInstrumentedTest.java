@@ -1,4 +1,4 @@
-package com.example.jagscoutapp3_1;
+package info.scoutApp.jagscoutapp3_1;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.jagscoutapp3_1", appContext.getPackageName());
+        assertEquals("com.scoutApp.jagscoutapp3_1", appContext.getPackageName());
     }
 }

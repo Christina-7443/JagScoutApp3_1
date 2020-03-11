@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.example.jagscoutapp3_1"
+        applicationId "info.scoutApp.jagscoutapp3_1"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1

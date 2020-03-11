@@ -1,13 +1,14 @@
-package com.example.jagscoutapp3_1;
+package info.scoutApp.jagscoutapp3_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import info.scoutApp.jagscoutapp3_1.R;
 
 public class MainActivity extends AppCompatActivity {
 

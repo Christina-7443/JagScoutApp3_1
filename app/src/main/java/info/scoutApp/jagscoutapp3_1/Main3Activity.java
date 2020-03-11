@@ -1,4 +1,4 @@
-package com.example.jagscoutapp3_1;
+package info.scoutApp.jagscoutapp3_1;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,22 +8,18 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.jagscoutapp3_1.DatabaseHelper;
-import com.example.jagscoutapp3_1.MainActivity;
-import com.example.jagscoutapp3_1.R;
+import info.scoutApp.jagscoutapp3_1.R;
 
-import static com.example.jagscoutapp3_1.Main2Activity.innerCount;
-import static com.example.jagscoutapp3_1.Main2Activity.lowerCount;
-import static com.example.jagscoutapp3_1.Main2Activity.outerCount;
-import static com.example.jagscoutapp3_1.Main2Activity.missedCount;
-import static com.example.jagscoutapp3_1.Main2Activity.penaltyCount;
+import static info.scoutApp.jagscoutapp3_1.Main2Activity.innerCount;
+import static info.scoutApp.jagscoutapp3_1.Main2Activity.lowerCount;
+import static info.scoutApp.jagscoutapp3_1.Main2Activity.outerCount;
+import static info.scoutApp.jagscoutapp3_1.Main2Activity.missedCount;
+import static info.scoutApp.jagscoutapp3_1.Main2Activity.penaltyCount;
 
 public class Main3Activity extends AppCompatActivity {
     Switch drive,

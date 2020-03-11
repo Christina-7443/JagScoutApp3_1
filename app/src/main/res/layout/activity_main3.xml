@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Main3Activity">
+    tools:context="info.scoutApp.jagscoutapp3_1.Main3Activity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/lightBlue"
-        tools:context=".Main3Activity"
+        tools:context="info.scoutApp.jagscoutapp3_1.Main3Activity"
         android:orientation="vertical">
 
 
