@@ -9,14 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="info.scoutApp.jagscoutapp3_1.Main3Activity"></activity>
-        <activity android:name="info.scoutApp.jagscoutapp3_1.Main2Activity" />
-        <activity android:name="info.scoutApp.jagscoutapp3_1.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Main2Activity"
+        android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity android:name=".Main3Activity"
+            android:parentActivityName=".Main2Activity">
+              <meta-data
+                  android:name="android.support.PARENT_ACTIVITY"
+                  android:value=".Main2Activity"/>
         </activity>
     </application>
 

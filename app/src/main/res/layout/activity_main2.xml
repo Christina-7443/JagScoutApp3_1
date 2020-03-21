@@ -100,23 +100,24 @@
 
                 <TableRow>
 
-                    <Button
-                        android:id="@+id/innerButton"
+                    <TextView
+                        android:id="@+id/textview"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/innerButton"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <Switch
+                        android:id="@+id/innerSwitch"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@color/darkGreen"
-                        android:onClick="CountInner"
-                        android:text="@string/innerButton"
-                        android:textColor="@color/black" />
-
-                    <Button
-                        android:id="@+id/minusInner"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:onClick="MinusInner"
-                        android:text="@string/minusButtons" />
+                        android:textOn="@string/yes"
+                        android:textOff="@string/no"
+                        android:textColor="@color/black"
+                        android:checked="false"/>
 
 
                 </TableRow>
@@ -135,22 +136,22 @@
 
 
                     <Button
-                        android:id="@+id/outerButton"
+                        android:id="@+id/upperButton"
                         style="android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@color/lightBlue"
-                        android:onClick="CountOuter"
+                        android:onClick="CountUpper"
                         android:text="@string/outerButton" />
 
 
                     <Button
-                        android:id="@+id/minusOuter"
+                        android:id="@+id/minusUpper"
                         style="android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="MinusOuter"
+                        android:onClick="MinusUpper"
                         android:text="@string/minusButtons" />
 
 

@@ -15,15 +15,16 @@ import android.widget.Toast;
 
 import info.scoutApp.jagscoutapp3_1.R;
 
-import static info.scoutApp.jagscoutapp3_1.Main2Activity.innerCount;
+
 import static info.scoutApp.jagscoutapp3_1.Main2Activity.lowerCount;
-import static info.scoutApp.jagscoutapp3_1.Main2Activity.outerCount;
+import static info.scoutApp.jagscoutapp3_1.Main2Activity.upperCount;
 import static info.scoutApp.jagscoutapp3_1.Main2Activity.missedCount;
 import static info.scoutApp.jagscoutapp3_1.Main2Activity.penaltyCount;
 
 public class Main3Activity extends AppCompatActivity {
     Switch drive,
             auto,
+            inner,
             rotation,
             position,
             level,
@@ -35,6 +36,7 @@ public class Main3Activity extends AppCompatActivity {
 
     String stDrive,
             stAuto,
+            stInner,
             stRotation,
             stPosition,
             strClimb,
@@ -62,6 +64,8 @@ public class Main3Activity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+        getSupportActionBar().setTitle("End Game");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         myDB = new DatabaseHelper(this);
         BtnEnd = findViewById(R.id.BtnEnd);
 
@@ -75,6 +79,7 @@ public class Main3Activity extends AppCompatActivity {
 
         drive = findViewById(R.id.driveOffLine);
         auto = findViewById(R.id.autoShots);
+        inner = findViewById(R.id.innerSwitch);
         rotation = findViewById(R.id.rotation);
         position = findViewById(R.id.position);
         climb = findViewById(R.id.climbed);
@@ -91,6 +96,7 @@ public class Main3Activity extends AppCompatActivity {
         stRobot=getIntent().getExtras().getString("nameRobot");
         stDrive=getIntent().getExtras().getString("didDrive");
         stAuto = getIntent().getExtras().getString("didShoot");
+        stInner = getIntent().getExtras().getString("didInner");
         stRotation=getIntent().getExtras().getString("didRotation");
         stPosition=getIntent().getExtras().getString("didPosition");
         tv.setText(st);
@@ -109,8 +115,8 @@ public class Main3Activity extends AppCompatActivity {
         });
     }
     public void resetVariables(){
-        innerCount = 0;
-        outerCount = 0;
+
+        upperCount = 0;
         lowerCount = 0;
         missedCount = 0;
         penaltyCount = 0;
@@ -149,8 +155,8 @@ public class Main3Activity extends AppCompatActivity {
 
                         boolean isInsterted = myDB.insertData(
                                 stRobot,
-                                innerCount,
-                                outerCount,
+                                stInner,
+                                upperCount,
                                 lowerCount,
                                 missedCount,
                                 penaltyCount,
@@ -192,8 +198,8 @@ public class Main3Activity extends AppCompatActivity {
                             buffer.append("Match Number :" + result.getString(1)+"\n");
                             buffer.append("Team number :" + result.getString(2)+"\n");
                             buffer.append("Scouter Name :" + result.getString(3)+"\n");
-                            buffer.append("Inner goals :" + result.getString(4)+"\n");
-                            buffer.append("Outer goals :" + result.getString(5)+"\n");
+                            buffer.append("Inner :" + result.getString(4)+"\n");
+                            buffer.append("Upper goals :" + result.getString(5)+"\n");
                             buffer.append("Lower goals :" + result.getString(6)+"\n");
                             buffer.append("Missed Count :" + result.getString(7)+"\n");
                             buffer.append("Penalty Count :" + result.getString(8)+"\n");

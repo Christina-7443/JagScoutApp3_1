@@ -17,6 +17,7 @@ public class Main2Activity extends AppCompatActivity {
     //declaring the variables for use later
 
     Switch  swDrive,
+            swInner,
             swAuto,
             swRotation,
             swPosition;
@@ -28,18 +29,18 @@ public class Main2Activity extends AppCompatActivity {
             stMatch,
             stRobot;
     //names buttons for findViewById
-    Button btnI;
-    Button btnO;
+
+    Button btnU;
     Button btnL;
     Button btnM;
     Button btnP;
     Button btnML;
-    Button btnMO;
-    Button btnMI;
+    Button btnMU;
+
     Button BtnNext;
     //labels variables for inside the public voids
-    public static int innerCount = 0;
-    public static int outerCount = 0;
+
+    public static int upperCount = 0;
     public static int lowerCount = 0;
     public static int missedCount = 0;
     public static int penaltyCount = 0;
@@ -49,20 +50,23 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        getSupportActionBar().setTitle("Game Play");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         swDrive = findViewById(R.id.driveOffLine);
         swAuto = findViewById(R.id.autoShots);
+        swInner = findViewById(R.id.innerSwitch);
         swRotation = findViewById(R.id.rotation);
         swPosition = findViewById(R.id.position);
 
         //makes the buttons connect with the ones in the .xml
-        btnI = (Button)findViewById(R.id.innerButton);
-        btnO = (Button)findViewById(R.id.outerButton);
+
+        btnU = (Button)findViewById(R.id.upperButton);
         btnL = (Button)findViewById(R.id.lowerButton);
         btnM = (Button)findViewById(R.id.missedShotButton);
         btnP = (Button)findViewById(R.id.penaltyButton);
-        btnMI = (Button)findViewById(R.id.minusInner);
-        btnMO = (Button)findViewById(R.id.minusOuter);
+
+        btnMU = (Button)findViewById(R.id.minusUpper);
         btnML = (Button)findViewById(R.id.minusLower);
 
 
@@ -97,27 +101,15 @@ public class Main2Activity extends AppCompatActivity {
 
 
     }
-
-
-    //makes the inner button say how many times it has been pressed
-    public void CountInner(View v){
-        innerCount++;
-        btnI.setText("Inner : " + String.valueOf(innerCount));
-    }
-    //subtracts 1 from Inner
-    public void MinusInner(View v){
-        innerCount--;
-        btnI.setText("Inner : " + String.valueOf(innerCount));
-    }
     //makes the outer button say how many times it has been pressed
-    public void CountOuter(View v){
-        outerCount++;
-        btnO.setText("Outer : " +  String.valueOf(outerCount));
+    public void CountUpper(View v){
+        upperCount++;
+        btnU.setText("Upper : " +  String.valueOf(upperCount));
     }
     //subtracts 1 from Outer
-    public void MinusOuter(View v){
-        outerCount--;
-        btnO.setText("Outer : " +  String.valueOf(outerCount));
+    public void MinusUpper(View v){
+        upperCount--;
+        btnU.setText("upper : " +  String.valueOf(upperCount));
     }
     //makes the lower button say how many times it has been pressed
     public void CountLower(View v){
@@ -153,7 +145,7 @@ public class Main2Activity extends AppCompatActivity {
     public void moveToEnd(){
         Intent lastPage = new Intent(Main2Activity.this, Main3Activity.class);
 
-        String strDrive, strAuto, strRotation, strPosition;
+        String strDrive, strAuto, strInner, strRotation, strPosition;
         if (swDrive.isChecked())
             strDrive = swDrive.getTextOn().toString();
         else
@@ -162,6 +154,10 @@ public class Main2Activity extends AppCompatActivity {
             strAuto = swAuto.getTextOn().toString();
         else
             strAuto = swAuto.getTextOff().toString();
+        if (swInner.isChecked())
+            strInner = swInner.getTextOn().toString();
+        else
+            strInner = swInner.getTextOff().toString();
         if (swRotation.isChecked())
             strRotation = swRotation.getTextOn().toString();
         else
@@ -176,6 +172,7 @@ public class Main2Activity extends AppCompatActivity {
         lastPage.putExtra("nameRobot" , stRobot);
         lastPage.putExtra("didDrive", strDrive);
         lastPage.putExtra("didShoot", strAuto);
+        lastPage.putExtra("didInner", strInner);
         lastPage.putExtra("didRotation", strRotation);
         lastPage.putExtra("didPosition", strPosition);
         startActivity(lastPage);

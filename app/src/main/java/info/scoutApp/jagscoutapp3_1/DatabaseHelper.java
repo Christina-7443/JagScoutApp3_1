@@ -15,7 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_1 = "ID";
     public static final String COL_3 = "stRobot";
     public static final String COL_5 = "inner_goals";
-    public static final String COL_6 = "outer_goals";
+    public static final String COL_6 = "upper_goals";
     public static final String COL_7 = "lower_goals";
     public static final String COL_8 = "missed_goals";
     public static final String COL_9 = "penalty_count";
@@ -45,8 +45,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "stMatch STRING, " +
                 "stRobot STRING, " +
                 "st STRING, " +
-                "inner_goals INTEGER, " +
-                "outer_goals INTEGER, " +
+                "inner_goals STRING, " +
+                "upper_goals INTEGER, " +
                 "lower_goals INTEGER, " +
                 "missed_goals INTEGER, " +
                 "penalty_count INTEGER, " +
@@ -70,8 +70,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     public boolean insertData(
             String stRobot,
-            Integer inner_goals,
-            Integer outer_goals,
+            String inner_goals,
+            Integer upper_goals,
             Integer lower_goals,
             Integer missed_goals,
             Integer penalty_count,
@@ -90,7 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_3, stRobot);
         contentValues.put(COL_5, inner_goals);
-        contentValues.put(COL_6, outer_goals);
+        contentValues.put(COL_6, upper_goals);
         contentValues.put(COL_7, lower_goals);
         contentValues.put(COL_8, missed_goals);
         contentValues.put(COL_9, penalty_count);
